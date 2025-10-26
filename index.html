@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الدكتور يونس بن يونس – أخصائي طب الأطفال والأمراض الصدرية</title>
+<meta name="description" content="موقع رسمي لعيادة الدكتور يونس بن يونس – طرابلس، ليبيا. معلومات طبية موثوقة ومقالات في طب الأطفال والأمراض الصدرية مع إمكانية التواصل عبر واتساب والبريد الإلكتروني.">
+<meta name="keywords" content="الدكتور يونس بن يونس, طب الأطفال, أمراض الصدر, طرابلس, ليبيا, ربو الأطفال, Asthma in children, Pediatric pulmonology">
+<link rel="canonical" href="https://youneskhalifa83.github.io/">
+<style>
+:root{--blue:#1578b6;--dark:#0b1726;--muted:#6b7b8c}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f9fc;color:var(--dark);line-height:1.5}
+.header{background:linear-gradient(90deg,var(--blue),#0e6aa8);color:#fff;padding:20px 16px;text-align:center}
+.logo{font-weight:800;font-size:28px;cursor:pointer;display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06)}
+.subtitle{opacity:0.95;margin-top:6px;font-size:15px}
+.nav{display:flex;gap:8px;justify-content:center;background:#e9f2fb;padding:8px;flex-wrap:wrap}
+.nav a{color:var(--blue);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:700}
+.container{max-width:980px;margin:18px auto;padding:0 14px}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(2,6,23,0.06);margin-bottom:14px}
+.lang-toggle{position:fixed;left:14px;top:14px;background:#fff;border:2px solid var(--blue);color:var(--blue);padding:8px 10px;border-radius:10px;cursor:pointer;font-weight:700;z-index:60}
+.footer{background:#fff;padding:18px;text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+.article{background:#fff;margin:10px 0;padding:12px;border-radius:10px}
+.btn{background:var(--blue);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+input,textarea{width:100%;padding:8px;border:1px solid #e6eef7;border-radius:8px;margin-top:6px}
+#adminAddArticle{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:200;background:#fff;padding:16px;border-radius:12px;max-width:92vw;box-shadow:0 20px 50px rgba(2,6,23,0.12)}
+#adminToast{display:none;position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--blue);color:#fff;padding:8px 12px;border-radius:10px;z-index:210}
+</style>
+</head>
+<body>
+
+<button class="lang-toggle" id="langToggle">English</button>
+
+<header class="header">
+  <div class="logo" id="logoY">Y</div>
+  <div style="margin-top:8px">
+    <div style="font-size:22px;font-weight:800">الدكتور يونس بن يونس</div>
+    <div class="subtitle">Pediatric Consultant | استشاري طب الأطفال</div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Main navigation">
+  <a href="#home" id="nav-home">الرئيسية</a>
+  <a href="#cv" id="nav-cv">السيرة الذاتية</a>
+  <a href="#blog" id="nav-blog">المقالات</a>
+  <a href="#contact" id="nav-contact">اتصل بنا</a>
+</nav>
+
+<main class="container">
+  <section id="home" class="card">
+    <h2>مرحبًا بكم في عيادة الدكتور يونس بن يونس</h2>
+    <p>أخصائي طب الأطفال والأمراض الصدرية في طرابلس – ليبيا. نقدم معلومات طبية موثوقة ونصائح للرعاية الصحية للأطفال.</p>
+  </section>
+
+  <section id="cv" class="card" aria-labelledby="nav-cv">
+    <h3>السيرة الذاتية</h3>
+    <p>المؤهلات والعضويات والخبرة العملية في مجال طب الأطفال.</p>
+  </section>
+
+  <section id="blog" class="card" aria-labelledby="nav-blog">
+    <h3>المقالات</h3>
+    <div id="articlesList"></div>
+  </section>
+
+  <section id="contact" class="card" aria-labelledby="nav-contact">
+    <h3>اتصل بنا</h3>
+    <p>واتساب: <a href="https://wa.me/218911050589" target="_blank">+218 91 105 0589</a></p>
+    <p>البريد الإلكتروني: info@dryounes.com</p>
+    <div style="margin-top:12px">
+      <div style="font-weight:700;margin-bottom:8px">عيادة الدكتور يونس بن يونس – طرابلس</div>
+      <!-- Google Maps iframe for the provided link (embedded coordinates approximate) -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55608.39553878728!2d13.137!3d32.887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8e9e4444e9aab%3A0x0!2z2KfZhNiz2YrYqSDYp9mE2YXZhtin2K8g2KfZhNiu2LHZhdmK!5e0!3m2!1sar!2sly!4v1696860000000!5m2!1sar!2sly" width="100%" height="300" style="border:0;border-radius:12px" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div style="margin-top:12px">
+      <div style="font-weight:700">رمز QR للموقع</div>
+      <div style="margin-top:8px"><img alt="QR" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://youneskhalifa83.github.io" style="border-radius:8px"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>© 2025 عيادة الدكتور يونس بن يونس</div>
+  <div style="margin-top:6px">آخر تحديث: أكتوبر 2025 | Last Updated: October 2025</div>
+</footer>
+
+<!-- Admin Add Article UI (hidden) -->
+<div id="adminAddArticle" aria-hidden="true">
+  <h3 style="margin-top:0">➕ إضافة مقال جديد</h3>
+  <input id="newTitleAr" placeholder="عنوان المقال بالعربية">
+  <input id="newTitleEn" placeholder="Title in English (optional)">
+  <textarea id="newBodyAr" rows="5" placeholder="نص المقال بالعربية"></textarea>
+  <textarea id="newBodyEn" rows="5" placeholder="Text in English (optional)"></textarea>
+  <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+    <button id="cancelAdd" class="btn" style="background:#ddd;color:#0b1726">إلغاء</button>
+    <button id="saveAdd" class="btn">حفظ المقال</button>
+  </div>
+</div>
+<div id="adminToast">✅ تم حفظ المقال بنجاح</div>
+
+<script>
+// Language handling (default Arabic)
+document.documentElement.lang = 'ar';
+function setArabicView(){ document.documentElement.dir='rtl'; document.querySelectorAll('[lang="en"]').forEach(e=>e.style.display='none'); document.querySelectorAll('[lang="ar"]').forEach(e=>e.style.display=''); document.getElementById('langToggle').textContent='English'; }
+function setEnglishView(){ document.documentElement.dir='ltr'; document.querySelectorAll('[lang="ar"]').forEach(e=>e.style.display='none'); document.querySelectorAll('[lang="en"]').forEach(e=>e.style.display=''); document.getElementById('langToggle').textContent='العربية'; }
+document.getElementById('langToggle').addEventListener('click', ()=>{
+  if(document.documentElement.lang==='ar'){ document.documentElement.lang='en'; setEnglishView(); } else { document.documentElement.lang='ar'; setArabicView(); }
+});
+setArabicView();
+
+// Load existing articles (includes the initial Asthma article)
+const initialArticles = [
+  {
+    id: 'asthma-1',
+    titleAr: 'الربو عند الأطفال',
+    titleEn: 'Asthma in Children',
+    bodyAr: 'الربو عند الأطفال هو مرض التهابي مزمن في الشعب الهوائية يؤدي إلى نوبات متكررة من السعال والصفير وضيق التنفس. يعتمد العلاج على موسعات الشعب وأدوية الكورتيزون الوقائية والمتابعة المنتظمة.',
+    bodyEn: 'Asthma in children is a chronic inflammatory disease of the airways causing recurrent episodes of coughing, wheezing and shortness of breath. Management uses bronchodilators, preventive corticosteroids and regular follow-up.'
+  }
+];
+
+function renderArticleElement(a){
+  const el=document.createElement('div'); el.className='article';
+  const h=document.createElement('h4'); h.textContent = (document.documentElement.lang==='ar'? (a.titleAr||a.titleEn) : (a.titleEn||a.titleAr));
+  const p=document.createElement('p'); p.textContent = (document.documentElement.lang==='ar'? (a.bodyAr||a.bodyEn) : (a.bodyEn||a.bodyAr));
+  el.appendChild(h); el.appendChild(p);
+  return el;
+}
+
+function renderAllArticles(){
+  const list=document.getElementById('articlesList'); list.innerHTML='';
+  // combine initial + stored
+  const stored = JSON.parse(localStorage.getItem('dr_younes_articles_v2')||'[]');
+  const combined = initialArticles.concat(stored);
+  combined.forEach(a=> list.appendChild(renderArticleElement(a)));
+}
+renderAllArticles();
+
+// Secret triple-click admin on logo to open add-article UI
+(function(){
+  const logo = document.getElementById('logoY');
+  if(!logo) return;
+  let clicks=0, timer=null;
+  const adminUI = document.getElementById('adminAddArticle');
+  const toast = document.getElementById('adminToast');
+  const saveBtn = document.getElementById('saveAdd');
+  const cancelBtn = document.getElementById('cancelAdd');
+  const STORAGE_KEY = 'dr_younes_articles_v2';
+  function showToast(msg){ toast.textContent=msg; toast.style.display='block'; setTimeout(()=>toast.style.display='none',1800); }
+  logo.addEventListener('click', ()=>{
+    clicks++; if(timer) clearTimeout(timer); timer=setTimeout(()=>clicks=0,700);
+    if(clicks>=3){ clicks=0; adminUI.style.display='block'; adminUI.setAttribute('aria-hidden','false'); }
+  });
+  cancelBtn.addEventListener('click', ()=>{ adminUI.style.display='none'; adminUI.setAttribute('aria-hidden','true'); });
+  saveBtn.addEventListener('click', ()=>{
+    const tAr=document.getElementById('newTitleAr').value.trim();
+    const tEn=document.getElementById('newTitleEn').value.trim();
+    const bAr=document.getElementById('newBodyAr').value.trim();
+    const bEn=document.getElementById('newBodyEn').value.trim();
+    if(!tAr && !tEn){ showToast('الرجاء إدخال عنوان'); return; }
+    if(!bAr && !bEn){ showToast('الرجاء إدخال نص'); return; }
+    const id = Date.now().toString(36);
+    const obj = {id:id,titleAr:tAr,titleEn:tEn,bodyAr:bAr,bodyEn:bEn};
+    const arr = JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'); arr.push(obj); localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    renderAllArticles();
+    showToast('✅ تم حفظ المقال بنجاح');
+    setTimeout(()=>{ adminUI.style.display='none'; adminUI.setAttribute('aria-hidden','true'); },600);
+    // clear inputs
+    document.getElementById('newTitleAr').value=''; document.getElementById('newTitleEn').value=''; document.getElementById('newBodyAr').value=''; document.getElementById('newBodyEn').value='';
+  });
+  // load stored articles on start
+  document.addEventListener('DOMContentLoaded', renderAllArticles);
+})();
+
+</script>
+</body>
+</html>

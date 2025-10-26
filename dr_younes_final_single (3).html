@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>الدكتور يونس بن يونس — dr_younes.com</title>
+<!-- favicon as data URL (simple stethoscope-like circle) -->
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231578b6'/%3E%3Cpath d='M20 20c0-4 4-6 8-6s8 2 8 6v8c0 4-4 6-8 6s-8-2-8-6z' fill='%23fff' opacity='0.95'/%3E%3C/svg%3E" rel="icon"/>
+<style>
+:root{--blue-deep:#0b4c82;--blue-mid:#1578b6;--blue-light:#3ec7e0;--accent:#0ea5a3;--white:#fff}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,var(--blue-mid),var(--blue-deep));color:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;gap:12px;background:rgba(255,255,255,0.03);position:sticky;top:0;z-index:40}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:22px}
+.site-title h1{margin:0;font-size:18px}
+.site-title p{margin:0;font-size:12px;color:rgba(255,255,255,0.9)}
+.nav{display:flex;gap:12px}
+.nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600;padding:6px 10px;border-radius:8px;}
+.container{max-width:1100px;margin:22px auto;padding:18px}
+.card{background:rgba(255,255,255,0.05);padding:18px;border-radius:12px}
+.hero{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.left{flex:1;min-width:260px}
+.lead{color:rgba(255,255,255,0.95);line-height:1.6}
+.actions{display:flex;gap:10px;margin-top:12px}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;border:none}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08)}
+.avatar{width:150px;height:150px;border-radius:14px;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+.contact p{margin:6px 0;color:rgba(255,255,255,0.95);font-weight:600}
+.floating-col{position:fixed;left:14px;bottom:140px;display:flex;flex-direction:column;gap:12px;z-index:80}
+.float-btn{width:48px;height:48px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--blue-mid),var(--blue-deep));color:#fff;text-decoration:none;font-weight:700}
+.chat-bubble{position:fixed;left:14px;bottom:26px;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));backdrop-filter:blur(6px);z-index:90;cursor:pointer}
+.chat-icon{width:52px;height:52px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));color:#fff;font-weight:800}
+.pulse{animation:pulse 2000ms infinite;}
+@keyframes pulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:0.85}100%{transform:scale(1);opacity:1}}
+.toast{position:fixed;left:14px;bottom:86px;background:linear-gradient(135deg,var(--blue-mid),var(--blue-deep));padding:10px 14px;border-radius:12px;color:#fff;box-shadow:0 14px 40px rgba(2,6,23,0.35);display:flex;flex-direction:column;gap:6px;z-index:88;opacity:0;transform:translateY(10px)}
+.chat-window{position:fixed;left:14px;bottom:86px;width:360px;max-width:92vw;border-radius:12px;background:rgba(255,255,255,0.05);backdrop-filter:blur(6px);padding:12px;z-index:95;display:none;flex-direction:column;gap:8px;color:var(--white)}
+.footer{background:#fff;color:#0b1726;padding:16px;border-top-left-radius:12px;border-top-right-radius:12px;margin-top:28px}
+.footer .inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.qr{width:96px;height:96px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--blue-deep);font-weight:700;cursor:pointer}
+.links-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;color:#0b1726;padding:18px;border-radius:12px;z-index:200;box-shadow:0 20px 60px rgba(2,6,23,0.35);display:none;min-width:280px;text-align:center}
+.link-btn{display:block;margin:10px auto;padding:10px 14px;border-radius:10px;background:var(--blue-mid);color:#fff;text-decoration:none;font-weight:700;width:80%}
+.small{font-size:13px;color:rgba(0,0,0,0.6)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.avatar{width:120px;height:120px;font-size:40px}.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="header" role="banner">
+<div class="brand">
+<div aria-hidden="true" class="logo">Y</div>
+<div class="site-title">
+<h1>الدكتور يونس بن يونس</h1>
+<p>dr_younes.com</p>
+</div>
+</div>
+<nav aria-label="Main" class="nav" role="navigation">
+<a href="#home" onclick="go('home')">الرئيسية</a>
+<a href="#about" onclick="go('about')">نبذة</a>
+<a href="#blog" onclick="go('blog')">المقالات</a>
+<a href="#contact" onclick="go('contact')">تواصل</a>
+</nav>
+</header>
+<main class="container" id="home">
+<section aria-labelledby="hero-title" class="card hero">
+<div class="left">
+<h2 data-ar="" id="hero-title">مرحبًا بكم في موقع الدكتور يونس بن يونس</h2>
+<h2 data-en="" style="display:none">Welcome to Dr Younes Ben Younes</h2>
+<p class="lead" data-ar="" id="lead-ar">الدكتور يونس خليفة بن يونس، أخصائي طب الأطفال والأمراض الصدرية، يهتم بتشخيص وعلاج أمراض الجهاز التنفسي عند الأطفال، ويؤمن بأهمية الرعاية الطبية المبنية على الخبرة والعلم والاهتمام الإنساني.</p>
+<p class="lead" data-en="" id="lead-en" style="display:none">Dr. Younes Khalifa Ben Younes, Pediatrician Consultant specialized in Pediatric Pulmonology, dedicated to providing expert care for children with respiratory diseases through knowledge, experience, and compassion.</p>
+<div class="actions">
+<button class="btn" onclick="go('about')">السيرة الذاتية / About</button>
+<button class="btn secondary" onclick="go('blog')">المقالات / Blog</button>
+</div>
+<div style="margin-top:12px">
+<!-- lungs svg -->
+<svg aria-hidden="true" height="72" viewbox="0 0 200 200" width="72" xmlns="http://www.w3.org/2000/svg">
+<g fill="#3ec7e0"><ellipse cx="70" cy="100" rx="30" ry="45"></ellipse><ellipse cx="130" cy="100" rx="30" ry="45"></ellipse></g>
+</svg>
+</div>
+</div>
+<div class="right">
+<div aria-label="Doctor avatar" class="avatar" role="img">
+<!-- faceless doctor small svg for avatar -->
+<svg aria-hidden="true" height="96" viewbox="0 0 200 200" width="96" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#1578b6" height="200" rx="18" width="200"></rect>
+<g fill="#fff" opacity="0.12" transform="translate(24,30)">
+<rect height="64" rx="24" width="56" x="46" y="8"></rect>
+<circle cx="74" cy="52" r="34"></circle>
+</g>
+</svg>
+</div>
+<small data-ar="">الدكتور يونس خليفة بن يونس — أخصائي طب الأطفال والأمراض الصدرية</small>
+<small data-en="" style="display:none">Dr Younes Khalifa Ben Younes — Pediatrician Consultant, Pediatric Pulmonology</small>
+</div>
+</section>
+<div class="grid">
+<div class="card" id="card-blog">
+<h3 data-ar="">المقالات الطبية</h3>
+<h3 data-en="" style="display:none">Medical Articles</h3>
+<article>
+<h4>LRTI in Children</h4>
+<button class="btn" id="translatePost" style="margin-top:8px">ترجمة</button>
+</article>
+</div>
+<aside class="card contact" id="contact-side">
+<h3 data-ar="">تواصل</h3>
+<h3 data-en="" style="display:none">Contact</h3>
+<p>📧 <a href="mailto:youneskhalifa83@gmail.com">youneskhalifa83@gmail.com</a></p>
+<p>📱 <a href="https://wa.me/218911050589" id="wa1" target="_blank">00218911050589 (WhatsApp)</a></p>
+<p>💼 <a href="https://wa.me/218927007832" id="wa2" target="_blank">00218927007832 (Business)</a></p>
+<p>🔗 <a href="https://www.facebook.com/younes.younes.589" id="fb" target="_blank">facebook.com/younes.younes.589</a></p>
+<div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-direction:row-reverse">
+<div class="qr" id="qr" title="امسح الرمز لزيارة صفحتي على فيسبوك أو الموقع">QR</div>
+<div style="font-size:12px;color:rgba(255,255,255,0.9);text-align:right">
+          امسح الرمز لزيارة صفحتي على فيسبوك<br/><strong>Scan to visit my Facebook</strong>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- About section -->
+<section id="about" style="padding:18px;max-width:1100px;margin:10px auto;display:none">
+<div class="card">
+<h2 data-ar="">السيرة الذاتية والمؤهلات</h2>
+<h2 data-en="" style="display:none">CV &amp; Qualifications</h2>
+<p data-ar="">الدكتور يونس خليفة بن يونس حاصل على بكالوريوس طب وجراحة عامة كلية الطب البشري جامعة المرقب سنة 2008-2009. ماجستير طب الأطفال من كلية الطب البشري جامعة الإسكندرية سنة 2015. عضو هيئة التدريس بكلية الطب البشري جامعة الزيتونة بترهونة. عضو الجمعية الأوروبية للصدرية والليبية للصدرية. مؤلف سلسلة كتب في طب الأطفال بعنوان How To Pass Pediatric Exam.</p>
+<p data-en="" style="display:none">Dr. Younes Khalifa Ben Younes holds MBChB (University of Al Marqab) 2009 and MSc Pediatrics (Alexandria) 2015. Faculty member at University of Al Zaytuna, Tarhuna. Member of European and Libyan respiratory societies. Author of 'How To Pass Pediatric Exam' series.</p>
+</div>
+</section>
+<!-- Blog section -->
+<section id="blog" style="padding:18px;max-width:1100px;margin:10px auto;display:none">
+<div class="card">
+<h2 data-ar="">المقالات الطبية</h2>
+<h2 data-en="" style="display:none">Medical Articles</h2>
+<article>
+<h3>LRTI in Children</h3>
+</article>
+<article>
+<h3>Asthma in Children</h3>
+<p data-en="" id="asthma-en">Asthma in children is a chronic inflammatory disease of the airways that causes repeated episodes of coughing, wheezing, and shortness of breath, especially at night or during exertion. Management focuses on controlling symptoms using bronchodilators and preventive corticosteroids, along with regular follow-up to prevent attacks.</p>
+<p data-ar="" id="asthma-ar" style="display:none">الربو عند الأطفال هو مرض التهابي مزمن في الشعب الهوائية يؤدي إلى نوبات متكررة من السعال والصفير وضيق التنفس، خاصة أثناء الليل أو عند بذل مجهود. يعتمد العلاج على السيطرة على الأعراض باستخدام موسعات الشعب وأدوية الكورتيزون الوقائية والمتابعة المنتظمة مع الطبيب لتجنب النوبات.</p>
+</article>
+</div>
+</section>
+<!-- Contact page (with links modal trigger) -->
+<section id="contact" style="padding:18px;max-width:1100px;margin:10px auto;display:none">
+<div class="card">
+<h2 data-ar="">تواصل</h2>
+<h2 data-en="" style="display:none">Contact</h2>
+<div style="margin-top:6px">
+<p>📧 <a href="mailto:youneskhalifa83@gmail.com">youneskhalifa83@gmail.com</a></p>
+<p>📱 <a href="https://wa.me/218911050589" target="_blank">00218911050589 (WhatsApp)</a></p>
+<p>💼 <a href="https://wa.me/218927007832" target="_blank">00218927007832 (Business)</a></p>
+<p>🔗 <a href="https://www.facebook.com/younes.younes.589" target="_blank">facebook.com/younes.younes.589</a></p>
+</div>
+<div style="margin-top:12px;display:flex;gap:12px;align-items:center;justify-content:center">
+<div class="qr" id="qr2">QR</div>
+<div style="text-align:center;color:rgba(0,0,0,0.7);background:#fff;padding:8px;border-radius:8px;width:60%">
+        امسح الرمز لزيارة صفحتي على فيسبوك أو اضغط لعرض اختيارات التصفح
+      </div>
+</div>
+<div style="margin-top:16px">
+<h4 style="color:#fff">عيادة الدكتور يونس بن يونس – طرابلس</h4>
+<iframe allowfullscreen="" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55608.39553878728!2d13.137!3d32.887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8e9e4444e9aab%3A0x0!2z2KfZhNiz2YrYqSDYp9mE2YXZhtin2K8g2KfZhNiu2LHZhdmK!5e0!3m2!1sar!2sly!4v1696860000000!5m2!1sar!2sly" style="border:0;border-radius:12px;margin-top:8px" width="100%"></iframe>
+</div>
+</div>
+</section>
+<!-- links modal (opens when QR clicked) -->
+<div aria-hidden="true" class="links-modal" id="linksModal" role="dialog">
+<h3>تصفح الروابط</h3>
+<p class="small">اختر أحد الخيارات:</p>
+<a class="link-btn" href="#" id="openSite" target="_blank">زيارة الموقع الرئيسي (dr_younes.com)</a>
+<a class="link-btn" href="https://www.facebook.com/younes.younes.589" id="openFB" target="_blank">زيارة صفحة فيسبوك</a>
+<div style="margin-top:8px"><button class="btn secondary" onclick="closeLinks()">إغلاق</button></div>
+</div>
+<!-- floating social -->
+<div aria-hidden="false" class="floating-col">
+<a class="float-btn" href="https://www.facebook.com/younes.younes.589" target="_blank" title="Facebook">f</a>
+<a class="float-btn" href="https://wa.me/218911050589" target="_blank" title="WhatsApp">w</a>
+</div>
+<!-- chat bubble -->
+<div aria-label="PediCare Assistant" class="chat-bubble" id="pedi-bubble" role="button">
+<div class="pulse" style="position:relative"><div class="chat-icon">Y</div></div>
+<div class="mini-text">اسألني عن الدكتور يونس</div>
+</div>
+<div aria-live="polite" class="toast" id="welcome-toast"><strong>مرحبًا!</strong><div>اسألني أي شيء عن الدكتور</div></div>
+<!-- chat window hidden-->
+<div aria-label="PediCare chat" class="chat-window" id="chat-window" role="dialog">
+<div class="messages" style="min-height:120px"></div>
+<div class="chat-controls" style="display:flex;gap:8px;align-items:center">
+<input class="input" id="chat-input" placeholder="اكتب سؤالك... / Type your question..." style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--white)"/>
+<button class="btn" id="voiceBtn">🎤</button>
+</div>
+</div>
+<button class="translate-toggle" id="translateToggle" title="Toggle language">ترجمة</button>
+<footer class="footer" role="contentinfo">
+<div class="inner">
+<div>🩺 الدكتور يونس بن يونس — dr_younes.com</div>
+<div style="display:flex;gap:10px;align-items:center">
+<a href="https://wa.me/218911050589" target="_blank">💬</a>
+<a href="mailto:youneskhalifa83@gmail.com">✉️</a>
+<a href="https://www.facebook.com/younes.younes.589" target="_blank">📘</a>
+<div class="small" style="margin-left:12px">امسح الرمز لزيارة صفحتي على فيسبوك أو الموقع</div>
+<div style="margin-left:8px"><img alt="QR" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&amp;data=https://www.facebook.com/younes.younes.589" style="width:56px;height:56px;border-radius:8px"/></div>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+  // navigation between sections
+  const sections = {home: document.getElementById('home'), about: document.getElementById('about'), blog: document.getElementById('blog'), contact: document.getElementById('contact')};
+  function go(name){
+    Object.values(sections).forEach(s=> s.style.display='none');
+    if(name==='home'){ document.getElementById('home').style.display='block'; window.scrollTo({top:0,behavior:'smooth'}); }
+    else{ sections[name].style.display='block'; sections[name].scrollIntoView({behavior:'smooth'}); }
+  }
+  window.go = go;
+  go('home');
+
+  // language toggle
+  function showArabic(){ document.documentElement.lang='ar'; document.documentElement.dir='rtl'; document.querySelectorAll('[data-ar]').forEach(el=>el.style.display=''); document.querySelectorAll('[data-en]').forEach(el=>el.style.display='none'); translateToggle.textContent='ترجمة'; }
+  function showEnglish(){ document.documentElement.lang='en'; document.documentElement.dir='ltr'; document.querySelectorAll('[data-ar]').forEach(el=>el.style.display='none'); document.querySelectorAll('[data-en]').forEach(el=>el.style.display=''); translateToggle.textContent='Translate'; }
+  const translateToggle = document.getElementById('translateToggle');
+  translateToggle.addEventListener('click', ()=>{ if(document.documentElement.lang==='ar' || document.documentElement.dir==='rtl') showEnglish(); else showArabic(); });
+  showArabic();
+
+  // translate post
+  document.getElementById('translatePost').addEventListener('click', ()=>{
+    const ar = document.getElementById('post-ar'); const en = document.getElementById('post-en');
+    if(ar.style.display==='none'){ ar.style.display=''; en.style.display='none'; } else { ar.style.display='none'; en.style.display=''; }
+  });
+
+  // welcome toast + TTS once per visitor
+  const firstKey = 'dr_younes_final_visit_v2';
+  setTimeout(()=>{ const toast = document.getElementById('welcome-toast'); toast.style.opacity=1; toast.style.transform='translateY(0)'; setTimeout(()=>{ toast.style.opacity=0; toast.style.transform='translateY(10px)'; },7000);
+    if(!sessionStorage.getItem(firstKey)){
+      // water drop sound via WebAudio
+      try{ const ctx=new (window.AudioContext||window.webkitAudioContext)(); const o=ctx.createOscillator(); const g=ctx.createGain(); o.type='sine'; o.frequency.value=880; o.connect(g); g.connect(ctx.destination); g.gain.value=0.0001; const now=ctx.currentTime; g.gain.exponentialRampToValueAtTime(0.02,now+0.01); o.start(now); g.gain.exponentialRampToValueAtTime(0.0001,now+0.25); o.stop(now+0.26);}catch(e){}
+      try{ const u=new SpeechSynthesisUtterance('مرحبًا بكم في موقع الدكتور يونس بن يونس'); u.lang='ar-SA'; u.rate=1; window.speechSynthesis.speak(u); setTimeout(()=>{ const v=new SpeechSynthesisUtterance('Welcome to Dr Younes Ben Younes website'); v.lang='en-US'; window.speechSynthesis.speak(v); },1200); }catch(e){}
+      sessionStorage.setItem(firstKey,'1');
+    }
+  },1200);
+
+  // QR click opens links modal (inside site) — shows two buttons (site and facebook)
+  const qr = document.getElementById('qr');
+  const qr2 = document.getElementById('qr2');
+  const modal = document.getElementById('linksModal');
+  function openLinks(){ modal.style.display='block'; modal.setAttribute('aria-hidden','false'); }
+  function closeLinks(){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); }
+  window.closeLinks = closeLinks;
+  if(qr) qr.addEventListener('click', openLinks);
+  if(qr2) qr2.addEventListener('click', openLinks);
+  // also footer QR image acts as scan target (it's an external image pointing to Facebook)
+  // prepare site button to open local home view
+  document.getElementById('openSite').addEventListener('click', function(e){ e.preventDefault(); closeLinks(); go('home'); });
+  // open facebook button uses real external link
+  document.getElementById('openFB').addEventListener('click', function(){ /* default opens in new tab via href */ });
+
+  // chat bubble behaviour with canned responses
+  const bubble = document.getElementById('pedi-bubble');
+  const chatWindow = document.getElementById('chat-window');
+  const messages = chatWindow.querySelector('.messages');
+  const input = document.getElementById('chat-input');
+  bubble.addEventListener('click', ()=>{ chatWindow.style.display = (chatWindow.style.display==='flex' ? 'none' : 'flex'); });
+  function append(msg, who){ const el = document.createElement('div'); el.style.margin='8px 0'; el.textContent = msg; el.style.background = who==='bot' ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.06)'; el.style.padding='8px'; el.style.borderRadius='8px'; messages.appendChild(el); messages.scrollTop = messages.scrollHeight; }
+  function respondTo(text){
+    text = text.toLowerCase();
+    if(text.includes('يونس') || text.includes('younes')) return 'الدكتور يونس بن يونس — أخصائي طب الأطفال والأمراض الصدرية. يمكنك الاطّلاع على السيرة الذاتية في قسم "نبذة".';
+    if(text.includes('تخصص') || text.includes('pulmon') || text.includes('صدر')) return 'متخصص في أمراض الجهاز التنفسي لدى الأطفال، يشمل التشخيص والعلاج والمتابعة طويلة الأمد.';
+    if(text.includes('العنوان') || text.includes('address')) return 'العنوان: (أضف العنوان هنا)';
+    if(text.includes('واتس') || text.includes('whatsapp')) return 'يمكنك التواصل عبر WhatsApp: 00218911050589 أو 00218927007832 للأعمال.';
+    return 'عذرًا، لم أفهم تمامًا. اسأل بأسئلة أبسط مثل: "ما تخصص الدكتور؟" أو "كيف أتواصل؟"';
+  }
+  input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ const text=input.value.trim(); if(!text) return; append(text,'user'); input.value=''; setTimeout(()=>{ const ans=respondTo(text); append(ans,'bot'); try{ const u=new SpeechSynthesisUtterance(ans); u.lang = document.documentElement.lang==='ar' ? 'ar-SA' : 'en-US'; u.rate=1; window.speechSynthesis.speak(u);}catch(e){} },600); } });
+
+  // voice support (if available)
+  const voiceBtn = document.getElementById('voiceBtn');
+  if('webkitSpeechRecognition' in window || 'SpeechRecognition' in window){
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const rec = new SR();
+    rec.lang='ar-SA'; rec.continuous=false; rec.interimResults=false;
+    let recognizing=false;
+    voiceBtn.addEventListener('click', ()=>{
+      if(!recognizing){ try{ rec.start(); recognizing=true; voiceBtn.textContent='⏺️'; }catch(e){} }
+      else{ rec.stop(); recognizing=false; voiceBtn.textContent='🎤'; }
+    });
+    rec.onresult = (e)=>{ const text = e.results[0][0].transcript; append(text,'user'); const ans = respondTo(text); setTimeout(()=>{ append(ans,'bot'); try{ const u=new SpeechSynthesisUtterance(ans); u.lang='ar-SA'; window.speechSynthesis.speak(u);}catch(e){} },700); };
+    rec.onend = ()=>{ recognizing=false; voiceBtn.textContent='🎤'; };
+  } else { voiceBtn.style.display='none'; }
+
+})(); // end IIFE
+</script>
+
+<!-- Admin Add-Article UI (hidden by default) -->
+<div id="adminAddArticle" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:300;background:rgba(255,255,255,0.98);color:#0b1726;padding:18px;border-radius:12px;min-width:300px;max-width:92vw;box-shadow:0 20px 50px rgba(2,6,23,0.25)">
+<h3 style="margin-top:0">➕ إضافة مقال جديد</h3>
+<label style="font-weight:700;display:block;margin-top:6px">العنوان (Arabic / English)</label>
+<input id="newTitleAr" placeholder="عنوان بالعربية" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd;margin-top:6px"/>
+<input id="newTitleEn" placeholder="Title in English (optional)" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd;margin-top:8px"/>
+<label style="font-weight:700;display:block;margin-top:10px">النص العربي</label>
+<textarea id="newBodyAr" placeholder="نص المقال بالعربية" rows="5" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd"></textarea>
+<label style="font-weight:700;display:block;margin-top:10px">Text (English, optional)</label>
+<textarea id="newBodyEn" placeholder="Article text in English (optional)" rows="5" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd"></textarea>
+<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
+<button class="btn secondary" id="cancelAdd" style="background:transparent;border:1px solid rgba(0,0,0,0.08);color:#0b1726">إلغاء</button>
+<button class="btn" id="saveAdd" style="background:#1578b6">حفظ المقال</button>
+</div>
+</div>
+<!-- Success toast for admin -->
+<div id="adminToast" style="position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#0b4c82;color:#fff;padding:10px 14px;border-radius:12px;display:none;z-index:305">✅ تم حفظ المقال بنجاح</div>
+
+<script>
+// Admin add-article feature (secret triple-click on logo "Y")
+(function(){
+  const logo = document.querySelector('.logo');
+  if(!logo) return;
+  // triple-click detection
+  let clickCount = 0;
+  let clickTimer = null;
+  const required = 3;
+  const windowMs = 700; // timeframe for 3 clicks
+  const adminUI = document.getElementById('adminAddArticle');
+  const saveBtn = document.getElementById('saveAdd');
+  const cancelBtn = document.getElementById('cancelAdd');
+  const toast = document.getElementById('adminToast');
+
+  const STORAGE_KEY = 'dr_younes_articles_v2';
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.style.display = 'block';
+    toast.style.opacity = '1';
+    setTimeout(()=>{ toast.style.opacity='0'; toast.style.display='none'; }, 2200);
+  }
+
+  function openAdmin(){
+    adminUI.style.display='block';
+  }
+  function closeAdmin(){
+    adminUI.style.display='none';
+    // clear inputs
+    document.getElementById('newTitleAr').value='';
+    document.getElementById('newTitleEn').value='';
+    document.getElementById('newBodyAr').value='';
+    document.getElementById('newBodyEn').value='';
+  }
+
+  logo.addEventListener('click', ()=>{
+    clickCount++;
+    if(clickTimer) clearTimeout(clickTimer);
+    clickTimer = setTimeout(()=>{ clickCount=0; }, windowMs);
+    if(clickCount>=required){
+      clickCount = 0;
+      openAdmin();
+    }
+  });
+
+  cancelBtn.addEventListener('click', (e)=>{ e.preventDefault(); closeAdmin(); });
+
+  // utility: create an element for article and append to both blog sections
+  function createArticleElement(obj){
+    // obj: {id, titleAr, titleEn, bodyAr, bodyEn}
+    const article = document.createElement('article');
+    // build inner HTML with data-ar and data-en pieces
+    const h3 = document.createElement('h3');
+    h3.textContent = obj.titleEn || obj.titleAr || 'Article';
+    // english heading shown when site is English; we'll include data attributes for both
+    // create english and arabic blocks
+    const pEn = document.createElement('p');
+    pEn.setAttribute('data-en','');
+    pEn.id = 'art-en-' + obj.id;
+    pEn.textContent = obj.bodyEn || obj.bodyAr || '';
+    const pAr = document.createElement('p');
+    pAr.setAttribute('data-ar','');
+    pAr.id = 'art-ar-' + obj.id;
+    pAr.textContent = obj.bodyAr || obj.bodyEn || '';
+    // initially hide based on page language controls; rely on existing toggle
+    // put elements together
+    article.appendChild(h3);
+    article.appendChild(pEn);
+    article.appendChild(pAr);
+    return article;
+  }
+
+  function appendArticleToPages(obj){
+    // append to blog section card and home card (if present)
+    try{
+      const blogCard = document.querySelector('#blog .card');
+      if(blogCard){
+        blogCard.appendChild(createArticleElement(obj));
+      }
+      const homeCard = document.querySelector('#card-blog');
+      if(homeCard){
+        homeCard.appendChild(createArticleElement(obj));
+      }
+    }catch(e){ console.error(e); }
+    // re-run language toggle visibility rules so new article follows current language
+    const htmlEl = document.documentElement;
+    if(htmlEl.lang==='ar' || htmlEl.dir==='rtl'){
+      document.querySelectorAll('[data-ar]').forEach(el=>el.style.display='');
+      document.querySelectorAll('[data-en]').forEach(el=>el.style.display='none');
+    } else {
+      document.querySelectorAll('[data-ar]').forEach(el=>el.style.display='none');
+      document.querySelectorAll('[data-en]').forEach(el=>el.style.display='');
+    }
+  }
+
+  function loadStoredArticles(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return;
+      const arr = JSON.parse(raw);
+      if(!Array.isArray(arr)) return;
+      // append each article
+      arr.forEach(a=> appendArticleToPages(a));
+    }catch(e){ console.error('loadStoredArticles', e); }
+  }
+
+  function saveArticleToStorage(obj){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      let arr = raw ? JSON.parse(raw) : [];
+      if(!Array.isArray(arr)) arr = [];
+      arr.push(obj);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    }catch(e){ console.error('saveArticleToStorage', e); }
+  }
+
+  saveBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const titleAr = document.getElementById('newTitleAr').value.trim();
+    const titleEn = document.getElementById('newTitleEn').value.trim();
+    const bodyAr = document.getElementById('newBodyAr').value.trim();
+    const bodyEn = document.getElementById('newBodyEn').value.trim();
+    if(!titleAr && !titleEn){ showToast('الرجاء إدخال عنوان المقال'); return; }
+    if(!bodyAr && !bodyEn){ showToast('الرجاء إدخال نص المقال'); return; }
+    const id = Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+    const obj = {id: id, titleAr: titleAr, titleEn: titleEn, bodyAr: bodyAr, bodyEn: bodyEn};
+    // append to UI
+    appendArticleToPages(obj);
+    // save persistently
+    saveArticleToStorage(obj);
+    // show confirmation
+    showToast('✅ تم حفظ المقال بنجاح');
+    // close admin modal after short delay
+    setTimeout(()=>{ closeAdmin(); }, 600);
+  });
+
+  // Initial load: read stored articles and render
+  document.addEventListener('DOMContentLoaded', function(){ loadStoredArticles(); });
+  // also call immediately (in case DOMContentLoaded already fired)
+  try{ loadStoredArticles(); }catch(e){}
+
+})(); // end admin IIFE
+</script>
+</body>
+</html>
